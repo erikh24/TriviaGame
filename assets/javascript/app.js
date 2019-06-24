@@ -1,4 +1,6 @@
 
+
+// TIMER FOR HOW LONG IS LEFT TO COMPLETE THE TRIVIA GAME 
 function countDown(secs, elem) {
     var element = document.getElementById(elem);
     element.innerHTML = "You have " + secs + " seconds left to finish";
@@ -9,7 +11,117 @@ function countDown(secs, elem) {
     secs--;
     var timer = setTimeout('countDown(' + secs + ',"' + elem + '")', 1000);
 }
-
 countDown(60, "counter");
 
+// BEGIN GAME WHEN 'START' IS CLICKED - Removed as linked to a new HTML document in index.html
+// $("#start-button").on("click", function () {
 
+// KEEPING TRACK OF USERS RIGHT OR WRONG GUESSES
+
+var correctGuess = 0;
+var wrongGuess = 0;
+var noGuess = 0;
+
+
+
+var questionArr = [
+    "1. The Last of Us released for Playstation 3 in this year and went on to win multiple Game of the Year Awards",
+    "2. What is Mega Man known as in Japan?",
+    "3. What upcoming game features Keanu Reeves as the character Johnny Silverhand?",
+    "4. Which of these games was not made from Insomniac Games?",
+    "5. Which game console came first?",
+    "6. What button combination gives you 30 lives in Contra on the Nintendo Entertainment System?"
+];
+
+var q1Answers = [
+    "2012",
+    "2013",
+    "2014",
+]
+
+var q2Answers = [
+    "Megaman",
+    "Mighty Man",
+    "Rock Man"
+]
+
+var q3Answers = [
+    "Borderlands 3",
+    "Cyberpunk 2077",
+    "Call of Duty Modern Warfare"
+]
+
+var q4Answers = [
+    "Ratchet & Clank: Going Commando",
+    "Resistance 3",
+    "Jak & Daxter"
+]
+
+var q5Answers = [
+    "Original Xbox",
+    "Dreamcast",
+    "Playstation 2"
+]
+
+var q6Answers = [
+    "&darr;	&darr; &uarr; &uarr; &larr;	&larr; &rarr; &rarr; B, A, Start ",
+    "&uarr; &uarr; &darr; &darr; &larr; &rarr; &larr; &rarr; B, A, Start",
+    "&uarr; &darr; &larr; &rarr; &rarr; &larr; &darr; &uarr; B, A, Start"
+]
+
+// QUESTION 1
+$('#q1').append('<p>' + questionArr[0] + '</p>');
+
+// QUESTION 1 ANSWERS
+$('#q1a1').append('<p>' + q1Answers[0] + '</p>');
+$('#q1a2').append('<p>' + q1Answers[1] + '</p>');
+$('#q1a3').append('<p>' + q1Answers[2] + '</p>');
+
+
+// QUESTION 2
+$('#q2').append('<p>' + questionArr[1] + '</p>');
+
+// QUESTION 2 ANSWERS
+$('#q2a1').append('<p>' + q2Answers[0] + '</p>');
+$('#q2a2').append('<p>' + q2Answers[1] + '</p>');
+$('#q2a3').append('<p>' + q2Answers[2] + '</p>');
+
+
+// QUESTION 3
+$('#q3').append('<p>' + questionArr[2] + '</p>');
+
+// QUESTION 3 ANSWERS
+$('#q3a1').append('<p>' + q3Answers[0] + '</p>');
+$('#q3a2').append('<p>' + q3Answers[1] + '</p>');
+$('#q3a3').append('<p>' + q3Answers[2] + '</p>');
+
+
+// QUESTION 4
+$('#q4').append('<p>' + questionArr[3] + '</p>');
+
+// QUESTION 4 ANSWERS
+$('#q4a1').append('<p>' + q4Answers[0] + '</p>');
+$('#q4a2').append('<p>' + q4Answers[1] + '</p>');
+$('#q4a3').append('<p>' + q4Answers[2] + '</p>');
+
+
+// QUESTION 5
+$('#q5').append('<p>' + questionArr[4] + '</p>');
+
+// QUESTION 5 ANSWERS
+$('#q5a1').append('<p>' + q5Answers[0] + '</p>');
+$('#q5a2').append('<p>' + q5Answers[1] + '</p>');
+$('#q5a3').append('<p>' + q5Answers[2] + '</p>');
+
+
+// QUESTION 6
+$('#q6').append('<p>' + questionArr[5] + '</p>');
+
+// QUESTION 6 ANSWERS
+$('#q6a1').append('<p>' + q6Answers[0] + '</p>');
+$('#q6a2').append('<p>' + q6Answers[1] + '</p>');
+$('#q6a3').append('<p>' + q6Answers[2] + '</p>');
+
+
+
+    
