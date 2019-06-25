@@ -22,7 +22,9 @@ var correctGuess = 0;
 var wrongGuess = 0;
 var noGuess = 0;
 
-
+$("#start-button").click(function () {
+    $("#jumbotron").hide();
+});
 
 var questionArr = [
     "1. The Last of Us released for Playstation 3 in this year and went on to win multiple Game of the Year Awards",
@@ -37,36 +39,42 @@ var q1Answers = [
     "2012",
     "2013",
     "2014",
+    "2013" // This is the answer
 ]
 
 var q2Answers = [
+    "Rock Man",
     "Megaman",
     "Mighty Man",
-    "Rock Man"
+    "Rock Man" // This is the answer
 ]
 
 var q3Answers = [
     "Borderlands 3",
     "Cyberpunk 2077",
-    "Call of Duty Modern Warfare"
+    "Call of Duty Modern Warfare",
+    "Cyberpunk 2077" // This is the answer
 ]
 
 var q4Answers = [
     "Ratchet & Clank: Going Commando",
     "Resistance 3",
-    "Jak & Daxter"
+    "Jak & Daxter",
+    "Jak & Daxter" // This is the answer
 ]
 
 var q5Answers = [
     "Original Xbox",
     "Dreamcast",
-    "Playstation 2"
+    "Playstation 2",
+    "Dreamcast" // This is the answer
 ]
 
 var q6Answers = [
     "&darr;	&darr; &uarr; &uarr; &larr;	&larr; &rarr; &rarr; B, A, Start ",
     "&uarr; &uarr; &darr; &darr; &larr; &rarr; &larr; &rarr; B, A, Start",
-    "&uarr; &darr; &larr; &rarr; &rarr; &larr; &darr; &uarr; B, A, Start"
+    "&uarr; &darr; &larr; &rarr; &rarr; &larr; &darr; &uarr; B, A, Start",
+    "&uarr; &uarr; &darr; &darr; &larr; &rarr; &larr; &rarr; B, A, Start" // This is the answer
 ]
 
 // QUESTION 1
@@ -124,4 +132,4 @@ $('#q6a3').append('<p>' + q6Answers[2] + '</p>');
 
 
 
-    
+
