@@ -11,7 +11,7 @@ function countDown(secs, elem) {
     secs--;
     var timer = setTimeout('countDown(' + secs + ',"' + elem + '")', 1000);
 }
-countDown(60, "counter");
+
 
 // BEGIN GAME WHEN 'START' IS CLICKED - Removed as linked to a new HTML document in index.html
 // $("#start-button").on("click", function () {
@@ -22,8 +22,25 @@ var correctGuess = 0;
 var wrongGuess = 0;
 var noGuess = 0;
 
+$(document).ready(function() {
+    $("#jumbotron").show();
+    $("#jumbotron2").hide();
+    $("#jumbotron3").hide();
+});
+
+
+
 $("#start-button").click(function () {
     $("#jumbotron").hide();
+    $("#jumbotron2").show();
+    countDown(60, "counter");
+
+});
+
+$("#submit-button").click(function() {
+    $("#jumbotron").hide();
+    $("#jumbotron2").hide();
+    $("#jumbotron3").show();
 });
 
 var questionArr = [
@@ -130,6 +147,8 @@ $('#q6a1').append('<p>' + q6Answers[0] + '</p>');
 $('#q6a2').append('<p>' + q6Answers[1] + '</p>');
 $('#q6a3').append('<p>' + q6Answers[2] + '</p>');
 
-
-
+// DISPLAY RESULTS
+$('#rightAnswers').append('<p>' + 'Correct Answers: ' + correctGuess + '</p>');
+$('#wrongAnswers').append('<p>' + 'Wrong Answers: ' + wrongGuess + '</p>');
+$('#noAnswer').append('<p>' + 'No Answer: ' + noGuess + '</p>');
 

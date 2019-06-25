@@ -26,315 +26,206 @@
 
 <body>
 
-    <div class="container" id="jumbotron">
-        <div class="jumbotron">
+    <div class="container">
+        <div class="jumbotron text-white" id="jumbotron">
             <h1 class="display-4" id="header">Video Game Trivia!</h1>
             <p class="lead">You will have 60 seconds to answer 6 questions about video games, both past and present.
             </p>
             <hr class="my-4">
             <p>Click the button below when you are ready to begin.</p>
-            <button id="start-button" type="button" class="btn btn-success btn-lg">Start</button>
+            <button id="start-button" type="button" class="btn btn-info btn-lg">Start</button>
         </div>
     </div>
 
-    <div class="container bg-primary" id=>
-        <div class="row text-center">
-            <div class="col-md" id="header">
-                <br>
-                <h1>Video Game Trivia!</h1>
-                <h1><br></h1>
-                <h2>Time Remaining: </h2>
-                <div id="counter"></div>
-                <br>
+
+    <!-- NEW jumbotron for the trivia questions -->
+    <div class="container text-white">
+        <div class="jumbotron" id="jumbotron2">
+            <h1 id="header" class="display-4">Video Game Trivia!</h1>
+            <h2>Time Remaining: </h2>
+            <h3><div id="counter"></div></h3>
+            <!-- <p class="lead">You will have 60 seconds to answer 6 questions about video games, both past and present.</p> -->
+            <hr class="my-4">
+
+            <!-- The Last of Us -->
+            <div class="container p-3">
+                <div class="form-check">
+                    <div id=q1></div>
+                    <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios1"
+                        value="option1">
+                    <label class="form-check-label" for="exampleRadios1">
+                        <div id="q1a1"></div>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios2"
+                        value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                        <div id="q1a2"></div>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios3"
+                        value="option3">
+                    <label class="form-check-label" for="exampleRadios3">
+                        <div id="q1a3"></div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Mega Man -->
+            <div class="container p-3">
+                <div class="form-check">
+                    <div id=q2></div>
+                    <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios1"
+                        value="option1">
+                    <label class="form-check-label" for="exampleRadios1">
+                        <div id="q2a1"></div>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios2"
+                        value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                        <div id="q2a2"></div>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios3"
+                        value="option3">
+                    <label class="form-check-label" for="exampleRadios3">
+                        <div id="q2a3"></div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Keanu Reeves -->
+
+            <div class="container p-3">
+                <div class="form-check">
+                    <div id=q3></div>
+                    <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios1"
+                        value="option1">
+                    <label class="form-check-label" for="exampleRadios1">
+                        <div id="q3a1"></div>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios2"
+                        value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                        <div id="q3a2"></div>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios3"
+                        value="option3">
+                    <label class="form-check-label" for="exampleRadios3">
+                        <div id="q3a3"></div>
+                    </label>
+                </div>
+            </div>
+
+            <!--Insomniac-->
+
+            <div class="container p-3">
+                <div class="form-check">
+                    <div id=q4></div>
+                    <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios1"
+                        value="option1">
+                    <label class="form-check-label" for="exampleRadios1">
+                        <div id="q4a1"></div>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios2"
+                        value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                        <div id="q4a2"></div>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios3"
+                        value="option3">
+                    <label class="form-check-label" for="exampleRadios3">
+                        <div id="q4a3"></div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Game Console (Dreamcast) -->
+
+            <div class="container p-3">
+                <div class="form-check">
+                    <div id=q5></div>
+                    <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios1"
+                        value="option1">
+                    <label class="form-check-label" for="exampleRadios1">
+                        <div id="q5a1"></div>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios2"
+                        value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                        <div id="q5a2"></div>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios3"
+                        value="option3">
+                    <label class="form-check-label" for="exampleRadios3">
+                        <div id="q5a3"></div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Konami Code -->
+
+            <div class="container p-3">
+                <div class="form-check">
+                    <div id=q6></div>
+                    <input class="form-check-input" type="radio" name="exampleRadios6" id="exampleRadios1"
+                        value="option1">
+                    <label class="form-check-label" for="exampleRadios1">
+                        <div id="q6a1"></div>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios6" id="exampleRadios2"
+                        value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                        <div id="q6a2"></div>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios6" id="exampleRadios3"
+                        value="option3">
+                    <label class="form-check-label" for="exampleRadios3">
+                        <div id="q6a3"></div>
+                    </label>
+                </div>
+            </div>
+
+
+            <p id="para">Click the button below when you are ready to submit your answers.</p>
+            <button id="submit-button" type="button" class="btn btn-danger btn-lg">Submit</button>
+        </div>
+    </div>
+
+
+
+<!-- NEW Jumbotron for the trivia game results -->
+    <div class="container">
+            <div class="jumbotron text-white" id="jumbotron3">
+                <h1 class="display-4" id="header">Video Game Trivia Results!</h1>
+                <p class="lead">Here's how you did:</p>
+                <hr class="my-4">
+                <p id="rightAnswers"></p>
+                <p id="wrongAnswers"></p>
+                <p id="noAnswer"></p>
             </div>
         </div>
-    </div>
-
-    <br>
-
-
-    <!-- The Last of Us -->
-
-    <div class="container bg-success p-3">
-        <div class="form-check">
-            <div id=q1></div>
-            <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios1" value="option1">
-            <label class="form-check-label" for="exampleRadios1">
-                <div id="q1a1"></div>
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios2" value="option2">
-            <label class="form-check-label" for="exampleRadios2">
-                <div id="q1a2"></div>
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios3" value="option3">
-            <label class="form-check-label" for="exampleRadios3">
-                <div id="q1a3"></div>
-            </label>
-        </div>
-    </div>
-
-    <br>
-
-    <!-- Mega Man -->
-    <div class="container bg-success p-3">
-        <div class="form-check">
-            <div id=q2></div>
-            <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios1" value="option1">
-            <label class="form-check-label" for="exampleRadios1">
-                <div id="q2a1"></div>
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios2" value="option2">
-            <label class="form-check-label" for="exampleRadios2">
-                <div id="q2a2"></div>
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios3" value="option3">
-            <label class="form-check-label" for="exampleRadios3">
-                <div id="q2a3"></div>
-            </label>
-        </div>
-    </div>
-
-    <br>
-
-    <!-- Keanu Reeves -->
-
-    <div class="container bg-success p-3">
-        <div class="form-check">
-            <div id=q3></div>
-            <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios1" value="option1">
-            <label class="form-check-label" for="exampleRadios1">
-                <div id="q3a1"></div>
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios2" value="option2">
-            <label class="form-check-label" for="exampleRadios2">
-                <div id="q3a2"></div>
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios3" value="option3">
-            <label class="form-check-label" for="exampleRadios3">
-                <div id="q3a3"></div>
-            </label>
-        </div>
-    </div>
-
-    <br>
-
-    <!--Insomniac-->
-
-    <div class="container bg-success p-3">
-        <div class="form-check">
-            <div id=q4></div>
-            <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios1" value="option1">
-            <label class="form-check-label" for="exampleRadios1">
-                <div id="q4a1"></div>
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios2" value="option2">
-            <label class="form-check-label" for="exampleRadios2">
-                <div id="q4a2"></div>
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios3" value="option3">
-            <label class="form-check-label" for="exampleRadios3">
-                <div id="q4a3"></div>
-            </label>
-        </div>
-    </div>
-
-    <br>
-
-    <!-- Game Console (Dreamcast) -->
-
-    <div class="container bg-success p-3">
-        <div class="form-check">
-            <div id=q5></div>
-            <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios1" value="option1">
-            <label class="form-check-label" for="exampleRadios1">
-                <div id="q5a1"></div>
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios2" value="option2">
-            <label class="form-check-label" for="exampleRadios2">
-                <div id="q5a2"></div>
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios3" value="option3">
-            <label class="form-check-label" for="exampleRadios3">
-                <div id="q5a3"></div>
-            </label>
-        </div>
-    </div>
-
-    <br>
-
-    <!-- Konami Code -->
-
-    <div class="container bg-success p-3">
-        <div class="form-check">
-            <div id=q6></div>
-            <input class="form-check-input" type="radio" name="exampleRadios6" id="exampleRadios1" value="option1">
-            <label class="form-check-label" for="exampleRadios1">
-                <div id="q6a1"></div>
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios6" id="exampleRadios2" value="option2">
-            <label class="form-check-label" for="exampleRadios2">
-                <div id="q6a2"></div>
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios6" id="exampleRadios3" value="option3">
-            <label class="form-check-label" for="exampleRadios3">
-                <div id="q6a3"></div>
-            </label>
-        </div>
-    </div>
-
-    <br>
-    <div class="container">
-        <button type="button" class="btn btn-outline-success btn-lg">Submit</button>
-    </div>
-
-
-
-    <br>
-    <!-- ////////////////////////////// old code to be removed ///////////////////////////////////////////////////////////////////////////// -->
-
-
-    <!-- <div class="container bg-success">
-        <div class="row mr-3 ml-3" id="question1">
-            <h3>The Last of Us released for Playstation 3 in this year and went on to win multiple Game of the Year
-                Awards.</h3>
-        </div>
-        <div class="radio mr-3 ml-3" id="1choice1">
-            <label><input type="radio" name="optradio" checked> 2012 </label>
-        </div>
-        <div class="radio mr-3 ml-3" id="1choice2">
-            <label><input type="radio" name="optradio" checked> 2013 </label>
-        </div>
-        <div class="radio mr-3 ml-3" id="1choice3">
-            <label><input type="radio" name="optradio" checked> 2014 </label>
-        </div>
-    </div> -->
-
-
-    <!-- <div class="container bg-success">
-        <div class="row mr-3 ml-3" id="question2">
-            <h3>What is Mega Man known as in Japan?</h3>
-        </div>
-        <div class="radio mr-3 ml-3" id="2choice1">
-            <label><input type="radio" name="optradio" checked> Megaman</label>
-        </div>
-        <div class="radio mr-3 ml-3" id="2choice2">
-            <label><input type="radio" name="optradio" checked> Mighty Man </label>
-        </div>
-        <div class="radio mr-3 ml-3" id="2choice3">
-            <label><input type="radio" name="optradio" checked> Rockman </label>
-        </div>
-    </div> -->
-
-    <!-- <br> -->
-
-    <!-- <div class="container bg-success">
-        <div class="row mr-3 ml-3" id="question3">
-            <h3>What upcoming game features Keanu Reeves as the character Johnny Silverhand?</h3>
-        </div>
-        <div class="radio mr-3 ml-3" id="3choice1">
-            <label><input type="radio" name="optradio" checked> Borderlands 3</label>
-        </div>
-        <div class="radio mr-3 ml-3" id="3choice2">
-            <label><input type="radio" name="optradio" checked> Cyberpunk 2077 </label>
-        </div>
-        <div class="radio mr-3 ml-3" id="3choice3">
-            <label><input type="radio" name="optradio" checked> Call of Duty Modern Warfare </label>
-        </div>
-    </div> -->
-
-    <!-- <br> -->
-
-    <!-- <div class="container bg-success">
-        <div class="row mr-3 ml-3" id="question4">
-            <h3>Which of these games was not made from Insomniac Games?</h3>
-        </div>
-        <div class="radio mr-3 ml-3" id="4choice1">
-            <label><input type="radio" name="optradio" checked> Ratchet & Clank: Going Commando</label>
-        </div>
-        <div class="radio mr-3 ml-3" id="4choice2">
-            <label><input type="radio" name="optradio" checked> Resistance 3</label>
-        </div>
-        <div class="radio mr-3 ml-3" id="4choice3">
-            <label><input type="radio" name="optradio" checked> Jak & Daxter</label>
-        </div>
-    </div> -->
-
-    <!-- <br> -->
-
-    <!-- <div class="container bg-success">
-        <div class="row mr-3 ml-3" id="question5">
-            <h3>Question 5:</h3>
-        </div>
-        <div class="radio mr-3 ml-3" id="5choice1">
-            <label><input type="radio" name="optradio" checked> Option 1</label>
-        </div>
-        <div class="radio mr-3 ml-3" id="5choice2">
-            <label><input type="radio" name="optradio" checked> Option 2</label>
-        </div>
-        <div class="radio mr-3 ml-3" id="5choice3">
-            <label><input type="radio" name="optradio" checked> Option 3</label>
-        </div>
-    </div> -->
-
-    <!-- <br> -->
-
-    <!-- <div class="container bg-success">
-        <div class="row mr-3 ml-3" id="question6">
-            <h3>Question 6:</h3>
-        </div>
-        <div class="radio mr-3 ml-3" id="6choice1">
-            <label><input type="radio" name="optradio" checked> Option 1</label>
-        </div>
-        <div class="radio mr-3 ml-3" id="6choice2">
-            <label><input type="radio" name="optradio" checked> Option 2</label>
-        </div>
-        <div class="radio mr-3 ml-3" id="6choice3">
-            <label><input type="radio" name="optradio" checked> Option 3</label>
-        </div>
-    </div> -->
-
-    <!-- <br> -->
-
-    <!-- <div class="container bg-success">
-        <div class="row mr-3 ml-3" id="question7">
-            <h3>Question 7:</h3>
-        </div>
-        <div class="radio mr-3 ml-3" id="7choice1">
-            <label><input type="radio" name="optradio" checked> Option 1</label>
-        </div>
-        <div class="radio mr-3 ml-3" id="7choice2">
-            <label><input type="radio" name="optradio" checked> Option 2</label>
-        </div>
-        <div class="radio mr-3 ml-3" id="7choice3">
-            <label><input type="radio" name="optradio" checked> Option 3</label>
-        </div>
-    </div>
-    <br> -->
-
 
 
 
