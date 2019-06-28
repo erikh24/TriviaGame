@@ -7,6 +7,8 @@ function countDown(secs, elem) {
     if (secs < 1) {
         clearTimeout(timer);
         element.innerHTML = "<h2>Times Up!!</h2>";
+        ///// *** need to make it go to the results screen when timer hits zero /////
+        ///// cood to go here /////
     }
     secs--;
     var timer = setTimeout('countDown(' + secs + ',"' + elem + '")', 1000);
@@ -35,6 +37,7 @@ $("#start-button").click(function () {
 
 // SUBMIT ANSWERS TO QUESTIONS WHEN 'SUBMIT' IS CLICKED
 $("#submit-button").click(function () {
+    // displayResults();
     $("#jumbotron").hide();
     $("#jumbotron2").hide();
     $("#jumbotron3").show();
@@ -149,15 +152,24 @@ $('#q6a3').append('<p>' + q6Answers[2] + '</p>');
 
 
 
-// DISPLAY RESULTS ON THE PAGE
-$('#rightAnswers').append('<p>' + 'Correct Answers: ' + correctGuess + '</p>');
-$('#wrongAnswers').append('<p>' + 'Wrong Answers: ' + wrongGuess + '</p>');
-$('#noAnswer').append('<p>' + 'No Answer: ' + noGuess + '</p>');
+// DISPLAY RESULTS ON THE PAGE  //// FUNCTION CURRENTLY NOT WORKING AS IT JUST LOGS CORRECT ANSWERS OVER AND OVER AND OVER AGAIN /////
+// displayResults = function() {
+    $('#rightAnswers').append('<p>' + 'Correct Answers: ' + correctGuess + '</p>');
+    $('#wrongAnswers').append('<p>' + 'Wrong Answers: ' + wrongGuess + '</p>');
+    $('#noAnswer').append('<p>' + 'No Answer: ' + noGuess + '</p>');
+// }
+
+var userAnswer1;
+var userAnswer2;
+var userAnswer3;
+var userAnswer4;
+var userAnswer5;
+var userAnswer6;
 
 
 
 
 
+////// NEED TO ADD CODE TO TRACK THE RESULTS OF HOW THE USER DID AT THE TRIVIA GAME AND DISPLAY THE RESULTS ON THE RESULTS PAGE
 
-   
 
