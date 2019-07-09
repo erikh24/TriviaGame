@@ -1,6 +1,6 @@
 
 
-// TIMER FOR HOW LONG IS LEFT TO COMPLETE THE TRIVIA GAME 
+// TIMER FOR HOW LONG IS LEFT TO COMPLETE THE TRIVIA GAME, MAY BE ABLE TO SIMPLY THIS?? 
 function countDown(secs, elem) {
     var element = document.getElementById(elem);
     element.innerHTML = "You have " + secs + " seconds left to finish";
@@ -13,7 +13,7 @@ function countDown(secs, elem) {
     secs--;
     var timer = setTimeout('countDown(' + secs + ',"' + elem + '")', 1000);
 }
-// KEEPING TRACK OF USERS RIGHT OR WRONG GUESSES
+// KEEPING TRACK OF USERS RIGHT OR WRONG GUESSES TO BE DISPLAYED ON THE RESULTS SCREEN
 
 var correctGuess = 0;
 var wrongGuess = 0;
@@ -35,9 +35,73 @@ $("#start-button").click(function () {
 
 });
 
-// SUBMIT ANSWERS TO QUESTIONS WHEN 'SUBMIT' IS CLICKED
+// SUBMIT ANSWERS TO QUESTIONS WHEN 'SUBMIT' IS CLICKED AND DISPLAY RESULTS
 $("#submit-button").click(function () {
-    // displayResults();
+
+    var test1 = $("#question1 input[type=radio]:checked").val();
+    var test2 = $("#question2 input[type=radio]:checked").val();
+    var test3 = $("#question3 input[type=radio]:checked").val();
+    var test4 = $("#question4 input[type=radio]:checked").val();
+    var test5 = $("#question5 input[type=radio]:checked").val();
+    var test6 = $("#question6 input[type=radio]:checked").val();
+
+
+      if (test1 === "option2") {
+        correctGuess++;
+    } else if (test1 === "option1" || test1 === "option3") {
+        wrongGuess++
+        console.log(wrongGuess)
+    } else {
+        noGuess++
+    }
+/////////////////////
+    if (test2 === "option1") {
+        correctGuess++
+    } else if (test2 === "option2" || test2 === "option3") {
+        wrongGuess++
+        console.log(wrongGuess)
+    } else {
+        noGuess++
+    }
+/////////////////////
+    if (test3 === "option2") {
+        correctGuess++;
+    } else if (test3 === "option1" || test3 === "option3") {
+        wrongGuess++
+        console.log(wrongGuess)
+    } else {
+        noGuess++
+    }
+/////////////////////
+    if (test4 === "option3") {
+        correctGuess++;
+    } else if (test4 === "option1" || test4 === "option2") {
+        wrongGuess++
+        console.log(wrongGuess)
+    } else {
+        noGuess++
+    }
+/////////////////////
+    if (test5 === "option2") {
+        correctGuess++;
+    } else if (test5 === "option1" || test5 === "option3") {
+        wrongGuess++
+        console.log(wrongGuess)
+    } else {
+        noGuess++
+    }
+///////////////////
+    if (test6 === "option2") {
+        correctGuess++;
+    } else if (test6 === "option1" || test6 === "option3") {
+        wrongGuess++
+    } else {
+        noGuess++
+    }
+    $('#rightAnswers').append('Right Answers: ' + correctGuess);
+    $('#wrongAnswers').append('Wrong Answers: ' + wrongGuess);
+    $('#noAnswer').append('No Answer: ' + noGuess);
+
     $("#jumbotron").hide();
     $("#jumbotron2").hide();
     $("#jumbotron3").show();
@@ -57,44 +121,38 @@ var questionArr = [
 // THE ANSWERS TO THE TRIVIA QUESTIONS
 var q1Answers = [
     "2012",
-    "2013",
-    "2014",
-    "2013" // This is the answer
+    "2013", // This is the answer
+    "2014"
 ]
 
 var q2Answers = [
-    "Rock Man",
+    "Rock Man", // This is the answer
     "Megaman",
-    "Mighty Man",
-    "Rock Man" // This is the answer
+    "Mighty Man"
 ]
 
 var q3Answers = [
     "Borderlands 3",
-    "Cyberpunk 2077",
-    "Call of Duty Modern Warfare",
-    "Cyberpunk 2077" // This is the answer
+    "Cyberpunk 2077", // This is the answer
+    "Call of Duty Modern Warfare"
 ]
 
 var q4Answers = [
     "Ratchet & Clank: Going Commando",
     "Resistance 3",
-    "Jak & Daxter",
     "Jak & Daxter" // This is the answer
 ]
 
 var q5Answers = [
     "Original Xbox",
-    "Dreamcast",
-    "Playstation 2",
-    "Dreamcast" // This is the answer
+    "Dreamcast", // This is the answer
+    "Playstation 2"
 ]
 
 var q6Answers = [
     "&darr;	&darr; &uarr; &uarr; &larr;	&larr; &rarr; &rarr; B, A, Start ",
-    "&uarr; &uarr; &darr; &darr; &larr; &rarr; &larr; &rarr; B, A, Start",
-    "&uarr; &darr; &larr; &rarr; &rarr; &larr; &darr; &uarr; B, A, Start",
-    "&uarr; &uarr; &darr; &darr; &larr; &rarr; &larr; &rarr; B, A, Start" // This is the answer
+    "&uarr; &uarr; &darr; &darr; &larr; &rarr; &larr; &rarr; B, A, Start", // This is the answer
+    "&uarr; &darr; &larr; &rarr; &rarr; &larr; &darr; &uarr; B, A, Start"
 ]
 
 // MAKING QUESTION 1 SHOW ON PAGE
@@ -153,18 +211,12 @@ $('#q6a3').append('<p>' + q6Answers[2] + '</p>');
 
 
 // DISPLAY RESULTS ON THE PAGE  //// FUNCTION CURRENTLY NOT WORKING AS IT JUST LOGS CORRECT ANSWERS OVER AND OVER AND OVER AGAIN /////
-// displayResults = function() {
-    $('#rightAnswers').append('<p>' + 'Correct Answers: ' + correctGuess + '</p>');
-    $('#wrongAnswers').append('<p>' + 'Wrong Answers: ' + wrongGuess + '</p>');
-    $('#noAnswer').append('<p>' + 'No Answer: ' + noGuess + '</p>');
+// $('#rightAnswers').html(correctGuess);
+// $('#wrongAnswers').append('<p>' + 'Wrong Answers: ' + wrongGuess + '</p>');
+// $('#noAnswer').append('<p>' + 'No Answer: ' + noGuess + '</p>');
 // }
 
-var userAnswer1;
-var userAnswer2;
-var userAnswer3;
-var userAnswer4;
-var userAnswer5;
-var userAnswer6;
+
 
 
 
