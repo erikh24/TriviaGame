@@ -1,12 +1,13 @@
 
 
-// TIMER FOR HOW LONG IS LEFT TO COMPLETE THE TRIVIA GAME, MAY BE ABLE TO SIMPLY THIS?? 
+// TIMER FOR HOW LONG IS LEFT TO COMPLETE THE TRIVIA GAME, MAY BE ABLE TO SIMPLIFY THIS?? 
 function countDown(secs, elem) {
     var element = document.getElementById(elem);
     element.innerHTML = "You have " + secs + " seconds left to finish";
     if (secs < 1) {
         clearTimeout(timer);
         element.innerHTML = "<h2>Times Up!!</h2>";
+
         ///// *** need to make it go to the results screen when timer hits zero /////
         ///// cood to go here /////
     }
@@ -100,7 +101,7 @@ $("#submit-button").click(function () {
     }
     $('#rightAnswers').append('Right Answers: ' + correctGuess);
     $('#wrongAnswers').append('Wrong Answers: ' + wrongGuess);
-    $('#noAnswer').append('No Answer: ' + noGuess);
+    $('#noAnswer').append('Unanswered: ' + noGuess);
 
     $("#jumbotron").hide();
     $("#jumbotron2").hide();
