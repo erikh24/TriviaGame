@@ -9,7 +9,7 @@ function countDown(secs, elem) {
         element.innerHTML = "<h2>Times Up!!</h2>";
 
         ///// *** need to make it go to the results screen when timer hits zero /////
-        ///// cood to go here /////
+        ///// code to go here? /////
     }
     secs--;
     var timer = setTimeout('countDown(' + secs + ',"' + elem + '")', 1000);
@@ -208,21 +208,4 @@ $('#q6').append('<p>' + questionArr[5] + '</p>');
 $('#q6a1').append('<p>' + q6Answers[0] + '</p>');
 $('#q6a2').append('<p>' + q6Answers[1] + '</p>');
 $('#q6a3').append('<p>' + q6Answers[2] + '</p>');
-
-
-
-// DISPLAY RESULTS ON THE PAGE  //// FUNCTION CURRENTLY NOT WORKING AS IT JUST LOGS CORRECT ANSWERS OVER AND OVER AND OVER AGAIN /////
-// $('#rightAnswers').html(correctGuess);
-// $('#wrongAnswers').append('<p>' + 'Wrong Answers: ' + wrongGuess + '</p>');
-// $('#noAnswer').append('<p>' + 'No Answer: ' + noGuess + '</p>');
-// }
-
-
-
-
-
-
-
-////// NEED TO ADD CODE TO TRACK THE RESULTS OF HOW THE USER DID AT THE TRIVIA GAME AND DISPLAY THE RESULTS ON THE RESULTS PAGE
-
 
