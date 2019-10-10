@@ -33,7 +33,6 @@ $("#start-button").click(function () {
     $("#jumbotron").hide();
     $("#jumbotron2").show();
     countDown(60, "counter");
-
 });
 
 // SUBMIT ANSWERS TO QUESTIONS WHEN 'SUBMIT' IS CLICKED AND DISPLAY RESULTS
